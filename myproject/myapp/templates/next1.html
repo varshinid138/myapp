@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next1</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9; /* Light background color */
+            color: #333; /* Dark text color for readability */
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #007bff; /* Primary color for the heading */
+            text-align: center;
+            margin-bottom: 30px; /* Space below the heading */
+        }
+        
+        .table-responsive {
+            overflow-x: auto; /* Allows horizontal scrolling if needed */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merges borders into a single line */
+        }
+        
+        th, td {
+            border: 1px solid #ddd; /* Light gray border for table cells */
+            padding: 12px; /* Padding inside cells */
+            text-align: left; /* Aligns text to the left */
+        }
+        
+        th {
+            background-color: #f4f4f4; 
+            color: #333; 
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9; 
+        }
+        
+        tr:nth-child(odd) {
+            background-color: #ffffff; 
+        }
+        
+        table caption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Module Done and Planned Module</h1>
+    <div class="table-responsive">
+        {{ table_html|safe }}
+    </div>
+</body>
+</html>

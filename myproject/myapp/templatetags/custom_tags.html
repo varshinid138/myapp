@@ -1,0 +1,11 @@
+from django import template
+
+register = template.Library()
+
+@register.simple_tag
+def render_field(field):
+    return f'<p>{field.label_tag()}: {field}</p>'
+
+@register.simple_tag
+def render_messages(messages):
+    return "".join([f'<li style="color:blue;">{message}</li>' for message in messages])

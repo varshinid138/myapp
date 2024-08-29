@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}" />
+    
+    <meta charset="utf-8" />
+    <title>{% block title %}My App{% endblock %}</title>
+</head>
+<body>
+    
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li style="color:blue;">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% block content %}
+
+    {% endblock %}
+    
+    
+</body>
+</html>

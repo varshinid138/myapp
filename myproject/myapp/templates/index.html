@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+    <style>
+        
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #007bff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+
+    <div class="container">
+        <h1>Welcome, {{ user.username }}! , {{ user.usertype }}</h1>
+
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+    </div>
+{% endblock %}
